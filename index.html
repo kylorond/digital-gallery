@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetherion by Ron</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&family=Tenor+Sans&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="antialiased">
+
+    <div class="mesh-gradient"></div>
+    <div id="cursor-dot"></div>
+    <div id="cursor-outline"></div>
+
+    <nav class="fixed top-0 w-full z-50 px-6 md:px-10 py-6 md:py-8 flex justify-between items-center bg-gradient-to-b from-[#0a0809] to-transparent">
+        <div class="font-display text-xl md:text-2xl tracking-[0.1em] font-bold text-rose-500">Ron</div>
+        <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.5em] font-semibold opacity-60">
+            <a href="#hero" class="hover:text-rose-300 transition-all">Home</a>
+            <a href="#journey" class="hover:text-rose-300 transition-all">Essence</a>
+            <a href="#gallery" class="hover:text-rose-300 transition-all">Archive</a>
+            <a href="#featured" class="hover:text-rose-300 transition-all">Curation</a>
+        </div>
+        <div class="text-[10px] font-mono tracking-tighter text-rose-400/50" id="scroll-percentage">00%</div>
+    </nav>
+
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/70 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1518131394553-c41818f038d0?auto=format&fit=crop&q=80&w=1920" class="w-full h-full object-cover scale-110 animate-[pulse_15s_infinite]">
+        </div>
+        
+        <div class="relative z-20 text-center px-6">
+            <h2 class="text-[9px] md:text-[10px] tracking-[1em] md:tracking-[1.5em] uppercase opacity-40 mb-6 md:mb-8" data-aos="fade-down">The Digital Gallery</h2>
+            <h1 class="font-display text-5xl md:text-[7rem] lg:text-[9rem] leading-none mb-6 tracking-tighter">
+                <span class="block text-outline">Aetherion</span>
+                <span class="block text-rose-500 rose-glow">Love</span>
+            </h1>
+            <div class="min-h-[60px] flex items-center justify-center">
+                <p id="typewriter" class="max-w-2xl mx-auto text-xs md:text-base font-light opacity-60 tracking-widest leading-relaxed italic text-rose-100"></p>
+            </div>
+            <div class="mt-12 md:mt-16 animate-bounce opacity-20">
+                <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="py-32 md:py-64 px-6 md:px-10">
+        <div class="max-w-6xl mx-auto">
+            <div class="scroll-reveal grid md:grid-cols-2 gap-16 md:gap-24 items-center mb-32 md:mb-64">
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-rose-500/5 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/5">
+                        <img src="https://plus.unsplash.com/premium_photo-1700353612860-bd8ab8d71f05?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover grayscale opacity-80 transition-all duration-1000 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
+                        <div class="overlay-shine"></div>
+                    </div>
+                </div>
+                <div class="px-2">
+                    <span class="text-rose-400 text-[9px] tracking-[1em] uppercase font-bold mb-6 block">Phase 01</span>
+                    <h2 class="font-display text-4xl md:text-6xl lg:text-7xl mb-8 leading-tight">Lorem Ipsum.</h2>
+                    <p class="text-slate-400 text-base md:text-lg leading-relaxed font-light mb-10">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quia accusamus ut cum fugit expedita corporis dicta enim ipsum nulla?
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 mb-12">
+                        <div>
+                            <div class="text-2xl md:text-3xl font-bold text-rose-400 mb-1">24k+</div>
+                            <div class="text-[9px] uppercase tracking-widest opacity-40">Moment</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl md:text-3xl font-bold text-rose-400 mb-1">∞</div>
+                            <div class="text-[9px] uppercase tracking-widest opacity-40">Souls Connection</div>
+                        </div>
+                    </div>
+                    <a href="#featured" class="inline-block px-8 md:px-10 py-4 border border-rose-400/30 rounded-full text-[10px] tracking-[0.5em] uppercase hover:bg-rose-500 hover:text-white transition-all">Explore Essence</a>
+                </div>
+            </div>
+
+            <div class="scroll-reveal grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+                <div class="order-2 md:order-1 px-2">
+                    <span class="text-rose-400 text-[9px] tracking-[1em] uppercase font-bold mb-6 block">Phase 02</span>
+                    <h2 class="font-display text-4xl md:text-6xl lg:text-7xl mb-8 leading-tight">Dolor sit Amet.</h2>
+                    <p class="text-slate-400 text-base md:text-lg leading-relaxed font-light mb-10">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi nisi mollitia excepturi esse dicta. Recusandae.
+                    </p>
+                    <div class="p-6 md:p-8 border-l border-rose-400/20 bg-rose-400/5 rounded-r-xl">
+                        <p class="italic text-sm opacity-60 font-serif leading-loose">"Cinta sejati tidak pernah memiliki akhir yang bahagia, karena tidak ada akhir dari cinta sejati". -Alexander Agung</p>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 relative group">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/5">
+                        <img src="https://plus.unsplash.com/premium_photo-1676690611480-38582b52220f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover grayscale opacity-80 transition-all duration-1000 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105">
+                        <div class="overlay-shine"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured" class="py-24 md:py-40 px-6 md:px-10 border-y border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 md:mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+                <h2 class="font-display text-5xl md:text-7xl italic" data-aos="fade-right">Curation <br><span class="text-rose-500 not-italic">Vault.</span></h2>
+                <p class="max-w-md text-[9px] md:text-xs tracking-widest leading-loose opacity-40 uppercase" data-aos="fade-left">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta veniam ut ex!
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
+                <div class="scroll-reveal group">
+                    <div class="aspect-[1/1] mb-6 overflow-hidden rounded-lg bg-white/5">
+                        <img src="https://images.unsplash.com/photo-1558293842-c0fd3db86157?q=80&w=422&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xs md:text-sm tracking-[0.3em] font-bold mb-2">ROSE SOLITUDE</h3>
+                    <p class="text-[9px] uppercase opacity-30">Series 01 &bull; 2026</p>
+                </div>
+                <div class="scroll-reveal group">
+                    <div class="aspect-[1/1] mb-6 overflow-hidden rounded-lg bg-white/5">
+                        <img src="https://images.unsplash.com/photo-1726873800099-53f5496281e0?q=80&w=710&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xs md:text-sm tracking-[0.3em] font-bold mb-2">ETHEREAL SPACE</h3>
+                    <p class="text-[9px] uppercase opacity-30">Series 02 &bull; 2026</p>
+                </div>
+                <div class="scroll-reveal group">
+                    <div class="aspect-[1/1] mb-6 overflow-hidden rounded-lg bg-white/5">
+                        <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    </div>
+                    <h3 class="text-xs md:text-sm tracking-[0.3em] font-bold mb-2">MONO NO AWARE</h3>
+                    <p class="text-[9px] uppercase opacity-30">Series 03 &bull; 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 md:py-40 bg-rose-900/5 relative overflow-hidden">
+        <div class="text-center mb-16 md:mb-32">
+            <h2 class="font-display text-4xl md:text-6xl mb-4 italic">Into the Forever</h2>
+            <div class="h-px w-24 bg-rose-500/40 mx-auto"></div>
+        </div>
+
+        <div class="marquee-track">
+            <div class="gallery-card aspect-[4/5] rounded-xl overflow-hidden relative group">
+                <img src="https://images.unsplash.com/photo-1513279922550-250c2129b13a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-rose-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="gallery-card aspect-[4/5] rounded-xl overflow-hidden relative group">
+                <img src="https://plus.unsplash.com/premium_photo-1664529914557-ee01920185e2?q=80&w=380&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-rose-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="gallery-card aspect-[4/5] rounded-xl overflow-hidden relative group">
+                <img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-rose-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="gallery-card aspect-[4/5] rounded-xl overflow-hidden relative group">
+                <img src="https://images.unsplash.com/photo-1507680576301-98c2029cf434?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-rose-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="gallery-card aspect-[4/5] rounded-xl overflow-hidden relative group">
+                <img src="https://images.unsplash.com/photo-1630576904866-d51b579796f8?q=80&w=902&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover">
+            </div>
+            <div class="gallery-card aspect-[4/5] rounded-xl overflow-hidden relative group">
+                <img src="https://images.unsplash.com/photo-1699726265399-b20b23853611?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover">
+            </div>
+            <div class="gallery-card aspect-[4/5] rounded-xl overflow-hidden relative group">
+                <img src="https://images.unsplash.com/reserve/Af0sF2OS5S5gatqrKzVP_Silhoutte.jpg?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover">
+            </div>
+            <div class="gallery-card aspect-[4/5] rounded-xl overflow-hidden relative group">
+                <img src="https://images.unsplash.com/photo-1699294144121-52eb57493c06?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-40 md:py-80 text-center relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-5">
+            <h1 class="text-[10rem] md:text-[20rem] font-bold text-outline whitespace-nowrap animate-[marquee_30s_linear_infinite]">ENDLESS STORY ENDLESS STORY</h1>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 scroll-reveal">
+            <h2 class="font-display text-6xl md:text-8xl lg:text-9xl mb-12 rose-glow">Ethernity.</h2>
+            <div class="min-h-[120px] md:min-h-[100px] flex items-center justify-center">
+                <p id="typewriter-outro" class="text-lg md:text-3xl font-light opacity-60 leading-relaxed italic mb-10 md:mb-20 text-rose-50 font-serif px-4"></p>
+            </div>
+            <div class="flex justify-center gap-4">
+                <div class="w-8 md:w-12 h-px bg-rose-500 self-center"></div>
+                <span class="text-[8px] md:text-[10px] tracking-[1em] opacity-30 uppercase">Ron</span>
+                <div class="w-8 md:w-12 h-px bg-rose-500 self-center"></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="player" class="fixed bottom-6 left-6 md:bottom-10 md:left-10 z-[100] flex items-center gap-4 md:gap-6 bg-black/60 backdrop-blur-2xl p-3 md:p-4 rounded-full border border-white/10 shadow-2xl">
+        <button id="musicToggle" class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-rose-500 flex items-center justify-center text-white hover:scale-110 active:scale-95 transition-all shadow-[0_0_20px_rgba(225,29,72,0.4)]">
+            <svg id="playIcon" class="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M6 4l10 6-10 6V4z"></path></svg>
+        </button>
+    </div>
+    <audio id="bgMusic" loop src="Music/Backsound.mp3"></audio>
+
+    <footer class="py-12 border-t border-white/5 text-center text-[7px] md:text-[8px] uppercase tracking-[1em] md:tracking-[1.5em] opacity-20">
+        Designby Ron &bull; 2026
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
