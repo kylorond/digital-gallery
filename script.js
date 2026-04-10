@@ -156,7 +156,7 @@ function buildGalleryTrack() {
 }
 let animationId = null;
 let translateX = 0;
-let speed = 1.2;
+let speed = 0.7;
 let isAnimating = true;
 function startInfiniteMarquee() {
     const track = document.getElementById('galleryTrack');
