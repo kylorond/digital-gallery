@@ -1,16 +1,13 @@
 AOS.init({ duration: 1200, once: true });
-
 const dot = document.getElementById('cursor-dot');
 const outline = document.getElementById('cursor-outline');
 const scrollPercent = document.getElementById('scroll-percentage');
 const isTouch = 'ontouchstart' in window;
-
 if(isTouch) {
     dot.style.display = 'none';
     outline.style.display = 'none';
     document.body.style.cursor = 'auto';
 }
-
 window.addEventListener('mousemove', (e) => {
     if(isTouch) return;
     const { clientX: x, clientY: y } = e;
@@ -19,7 +16,6 @@ window.addEventListener('mousemove', (e) => {
         transform: `translate3d(${x - 15}px, ${y - 15}px, 0)`
     }, { duration: 500, fill: "forwards", easing: "cubic-bezier(0.23, 1, 0.32, 1)" });
 });
-
 const reveals = document.querySelectorAll('.scroll-reveal');
 const updateScroll = () => {
     const h = document.documentElement, b = document.body;
@@ -32,16 +28,13 @@ const updateScroll = () => {
         }
     });
 };
-
 window.addEventListener('scroll', updateScroll);
 window.addEventListener('resize', updateScroll);
 updateScroll();
-
 const audio = document.getElementById('bgMusic');
 const btn = document.getElementById('musicToggle');
 const icon = document.getElementById('playIcon');
 let playing = false;
-
 function startMusic() {
     if(playing) return;
     audio.play().then(() => {
@@ -49,7 +42,6 @@ function startMusic() {
         icon.innerHTML = '<path d="M6 4h4v12H6V4zm4 0h4v12h-4V4z"></path>';
     }).catch(() => {});
 }
-
 window.addEventListener('load', () => {
     startMusic();
     document.body.addEventListener('click', function once() {
@@ -61,7 +53,6 @@ window.addEventListener('load', () => {
         document.body.removeEventListener('touchstart', onceTouch);
     }, { once: true });
 });
-
 btn.addEventListener('click', () => {
     if(!playing) {
         audio.play();
@@ -73,7 +64,6 @@ btn.addEventListener('click', () => {
         playing = false;
     }
 });
-
 function createTypewriter(elementId, phrases) {
     const el = document.getElementById(elementId);
     if(!el) return;
@@ -101,26 +91,22 @@ function createTypewriter(elementId, phrases) {
     }
     tick();
 }
-
 const heroPhrases = [
     "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "lorem has been the industry's standard dummy text ever since the 1500s.",
     "ipsum is simply dummy text of the printing and typesetting industry.",
     "amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 ];
-
 const outroPhrases = [
     "\"From this day forward, you shall not walk alone. My heart will be your shelter and my arms will be your home.\"",
     "\"I’d choose you over and over again, in every lifetime.\"",
     "\"With you, I found my forever love.\"",
     "\"I love you more than words can express.\""
 ];
-
 window.addEventListener('load', () => {
     createTypewriter('typewriter', heroPhrases);
     createTypewriter('typewriter-outro', outroPhrases);
 });
-
 document.querySelectorAll('a, button, .group').forEach(link => {
     link.addEventListener('mouseenter', () => {
         if(isTouch) return;
@@ -137,13 +123,11 @@ document.querySelectorAll('a, button, .group').forEach(link => {
         outline.style.backgroundColor = 'transparent';
     });
 });
-
 window.addEventListener('scroll', () => {
     const winScroll = window.scrollY;
     const hero = document.getElementById('hero');
     if(hero) hero.style.opacity = 1 - Math.min(winScroll / 500, 0.3);
 });
-
 const galleryImages = [
     "https://images.unsplash.com/photo-1513279922550-250c2129b13a?q=80&w=870&auto=format&fit=crop",
     "https://plus.unsplash.com/premium_photo-1664529914557-ee01920185e2?q=80&w=380&auto=format&fit=crop",
@@ -154,7 +138,6 @@ const galleryImages = [
     "https://images.unsplash.com/reserve/Af0sF2OS5S5gatqrKzVP_Silhoutte.jpg?q=80&w=870&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1699294144121-52eb57493c06?q=80&w=387&auto=format&fit=crop"
 ];
-
 function buildGalleryTrack() {
     const track = document.getElementById('galleryTrack');
     if(!track) return;
@@ -171,12 +154,10 @@ function buildGalleryTrack() {
     }
     track.innerHTML = html;
 }
-
 let animationId = null;
 let translateX = 0;
-let speed = 0.5;
+let speed = 1.2;
 let isAnimating = true;
-
 function startInfiniteMarquee() {
     const track = document.getElementById('galleryTrack');
     if(!track) return;
@@ -193,12 +174,10 @@ function startInfiniteMarquee() {
     if(animationId) cancelAnimationFrame(animationId);
     animationId = requestAnimationFrame(step);
 }
-
 window.addEventListener('load', () => {
     buildGalleryTrack();
     startInfiniteMarquee();
 });
-
 window.addEventListener('resize', () => {
     const track = document.getElementById('galleryTrack');
     if(track && animationId) {
